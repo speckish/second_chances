@@ -8,6 +8,7 @@ define prof = "Professor"
 # This refers to his narration.
 define yN = Character("Yuki", what_italic=True, what_suffix=")", what_prefix="(")
 define cat = Character("Cat", what_italic=True)
+# TODO: Make cat dynamic
 
 define he = "he"
 define hed = "he'd"
@@ -20,12 +21,9 @@ define His = "His"
 
 default passed = True
 
-style window:
-    left_padding 150
-
 label start:
-    "<This line is here for testing.>"
-    call hook
+    # "<This line is here for testing.>"
+    call hook from _call_hook
     scene bg yukis_cabin_inside morning with fade
     yuki
     "Yuki stared out the window."
@@ -227,13 +225,13 @@ label start:
             yuki sad
             "Aurelia narrowed her eyes, so I decided not to challenge her words further."
 
-    call wish_granted
-    call first_day
-    call classroom
-    call cafeteria
-    call library
-    call mother_call
-    call assignment
+    call wish_granted from _call_wish_granted
+    call first_day from _call_first_day
+    call classroom from _call_classroom
+    call cafeteria from _call_cafeteria
+    call library from _call_library
+    call mother_call from _call_mother_call
+    call assignment from _call_assignment
 
     return
 
@@ -397,7 +395,8 @@ label hook:
     play sound "audio/quinn_run_away.mp3"
     "Quinn ran, her footsteps echoing through the corridor."
     yuki angry
-    "Yuki looked around. There were a dozen animal corpses strewn at his feet. Bottles containing half-finished potions were everywhere. Some were at his desk
+    "Yuki looked around. There were a dozen animal corpses strewn at his feet."
+    "Bottles containing half-finished potions were everywhere. Some were at his desk
     for testing, others lay broken on the floor."
     yuki sad
     y "I just wanted to save Mother. I didn't want her to die!"
@@ -464,12 +463,13 @@ label classroom:
     "Each demonstrated their unique abilities. A definite part of it was to impress the Juris students who were watching in awe."
     yuki sad
     "After every demonstration, Professor Chen looked more and more disappointed. This frustrated the students, who began to make mistakes."
-    yuki shocked sweat
+    yuki shocked sweat startle
     show quinn shocked sweat at startle
-    show zethe angry
+    show zethe angry at startle
     play sound "audio/mini_boom.mp3"
     "Student" "UWAAAAAAAAH!!"
     play sound "audio/water_pour.mp3"
+    yuki shocked sweat
     "The student's hair caught on fire. The students sitting down began to laugh heartily as Professor Chen cast a water spell to drench it."
     yuki sad
     show zethe neutral
@@ -583,129 +583,263 @@ label classroom:
             show zethe shocked blush
             yuki sad blush
             yN "At least now I outdid you..."
-            scene black with fade
-            call infirmary_start
+            call infirmary_start from _call_infirmary_start
+            show zethe angry
+            show quinn sad
+            yuki shocked
             z "Everyone failed the test."
+            yuki sad
             "Yuki wasn't surprised, but he groaned."
+            show zethe neutral
             y "I figured."
+            show zethe happy
+            yuki
             z "You know, you are quite strong."
+            show yuki shocked
             "Yuki raised an eyebrow."
+            show yuki sad
             y "I feel a 'but...' coming."
+            show zethe happy
             "He smirked."
             z "Oh? Apparently I am quite predictable."
             "There was no way Yuki could say that he'd already dealt with this before, so he resorted to a simpler retort."
+            show zethe shocked
+            show yuki happy
             y "I'm always a step ahead."
+            yuki
+            show zethe neutral
+            show quinn angry
             "Quinn shook her head."
+            show quinn angry blush
             q "Both of you, Yuki's really injured! Don't make it worse."
+            yuki happy
             "I smiled weakly at her concern. She really was the same."
+            show zethe sad
+            show quinn angry -blush
             "Zethe frowned, but didn't say much else."
+            show zethe happy
+            yuki neutral
+            show quinn sad
             z "Hurry up and get better so I can truly defeat you. Next time, in a real duel."
+            yuki happy
             "Yuki chuckled."
             y "Careful what you wish for."
 
         "Refuse and cast a basic spell.":
+            yuki
             "Yuki shook his head. He wasn't about to fall for the bait."
             "He took a deep breath and held out his palm."
+            yuki sad
             y "..."
+            show quinn shocked
+            show zethe happy
+            play sound "audio/yuki_magic_chime.mp3"
             "After concentrating a little, a small bubble formed."
+            yuki
             "It floated to the top and popped."
+            show zethe neutral blush
             z "..."
+            show quinn shocked blush
             q "..."
             prof "..."
+            show zethe neutral -blush
+            show quinn sad -blush
+            yuki happy
             y "That was my demonstration. Thank you very much."
+            play sound "audio/class_boo.mp3"
+            yuki
+            show quinn sad sweat
             "The entire class began to boo, but Yuki stayed stoic. He wasn't about to let a class of rowdy kids get him down."
+            play sound "audio/double_clap.mp3"
             "Professor Chen clapped his hands twice. The sound was so loud, the entire class went quiet."
+            show zethe angry blush
+            show quinn shocked -sweat
             prof "Students. In front of us is the only student who passsed the examination."
+            show zethe angry -blush
+            show quinn neutral -blush
+            play sound "audio/class_murmur.mp3"
+            yuki happy
             "The class began to whisper and murmur, but Professor Chen waved his hand and they went silent again."
+            yuki
             "He paced the room."
+            show zethe neutral
+            show quinn angry
             prof "Being in control is the most important skill a magician can have."
+            show zethe angry
+            yuki happy
             "He stopped in front of Zethe, who clicked his tongue."
+            yuki
             prof "Unfortunately, most learn it too late. In fact, in the year..."
+            show zethe neutral
+            yuki sad
             "His words droned on. Although the spell was extremely easy, the exhaustion of the day's events caught up to him. Yuki felt his eyelids droop."
+            yuki sad sweat
             yN "Don't... sleep..."
+            yuki sad blush
+            show quinn shocked bluch
             "But Yuki couldn't help it. As if by instinct, he caught Quinn's eyes. They were full of concern."
+            show zethe shocked
             yN "Even now, huh? I guess I am a fool...."
-
-            call infirmary_start
+            call infirmary_start from _call_infirmary_start_1
+            show zethe angry
+            show quinn happy
             z "You were the only one who passed the test."
+            yuki happy
             "Even though he'd expected it, Yuki felt a small thrill through his spine."
+            yuki
+            show quinn neutral
             y "I know."
+            show zethe neutral
+            show quinn happy
             q "I'm glad you didn't do anything rash."
+            yuki happy
             "Her voice was soft, but Yuki felt her relief through it."
+            show quinn shocked
+            show zethe angry
+            yuki
             z "You are definitely far stronger than that. I will be keeping an eye out."
+            yuki sad
+            show quinn sad
             q "Zethe, don't talk like that."
+            show zethe angry blush
             z "But it is true!"
+            show zethe angry -blush
             "He glared."
+            show quinn shocked
             z "There is something he's keeping from us."
+            yuki shocked sweat
             "Yuki felt a shudder run through his body."
+            yuki shocked
             yN "Keep calm..."
+            yuki
+            show quinn sad
             y "Too bad, I don't need to rely on parlor tricks to show my worth."
+            show zethe angry blush
             z "You called that a {i}parlor trick?!{/i}"
+            show zethe angry -blush
             y "Yes, that's right. I did."
+            yuki happy
             "Zethe looked angry, but the pink tinting his cheeks was from more than just that. Yuki had got to him."
-
+    call infirmary_end from _call_infirmary_end
     return
 
 label infirmary_start:
+    yuki sad blush faint
+    '...'
+    yuki None
+    scene black with fade
     play sound "audio/thud.mp3"
     pause 0.5
     play sound "audio/quinn_gasp.mp3"
+    pause 0.25
     yuki None
     "There was a loud thud when Yuki's body hit the floor."
+    yuki sad
     yN "Where... where am I?"
     "Yuki tried to open his eyes, but they felt like lead."
     z "Is he ever going to wake up?"
     q "D-Don't say something like that!"
+    yuki shocked
     scene bg infirmary afternoon
-    show quinn sad at one_two
+    show quinn sad blush at one_two
     show zethe happy at two_two
     with fade
     "Yuki's eyes flew open."
+    show quinn shocked
+    yuki shocked blush
+    show zethe neutral
     q "Oh, you're awake!"
+    show quinn sad -blush
+    yuki shocked
     z "Finally."
+    yuki
     y "What are you doing here?"
     z "Us? We are simply here to tell you that..."
-
     return
 
 label infirmary_end:
+    yuki shocked
+    show quinn shocked
+    show zethe angry blush
     z "It's infuriating. That professor does not understand what true power is!"
+    yuki
+    show quinn sad
     "Yuki gazed up at Zethe from the bed. It was exactly how he'd thought years ago."
+    show zethe angry -blush
+    show quinn neutral
     q "No, I think Professor Chen has a point. Being reckless and rushing headfirst... I-I don't think that's the best way to do things."
+    show zethe neutral
     "Zethe's gaze softened at her response."
+    show zethe sad
     z "Maybe, but..."
     "Looking at the two of them interact as if they were long-lost friends made my heart clench."
+    show quinn shocked
+    show zethe shocked
+    yuki angry
     y "Both of you. Leave."
+    show quinn shocked blush
     q "W-What? But you haven't recovered!"
     y "I said {b}leave.{/b}"
+    show yuki shocked
+    show quinn angry
     q "No!"
+    show zethe neutral
     "Yuki was shocked at her protest. She never did this in the past. Probably because he'd never asked her to leave."
+    show quinn angry blush
     q "The infirmary teacher is not present. I won't let you stay alone like this. I-If something happens, it would be really bad."
+    show quinn angry
+    yuki sad
     y "Okay."
     "Yuki was touched, but he didn't want to admit it."
+    show zethe sad
+    show quinn sad
     z "Ugh. I suppose I will be here as well."
+    show zethe shocked
+    yuki angry
     y "No one asked you to stay."
+    show zethe angry blush
+    yuki
     z "As if I care. Besides, that teacher's lesson was completely unfair to begin with. Power is important, he doesn't understand that."
+    show zethe angry
     "It may have been so. But Yuki truly believed that..."
 
     menu:
         "Power is everything":
+            yuki angry blush
             y "Power is truly everything. However, remaining calm is part and parcel of being powerful."
+            yuki angry
+            show zethe happy
             z "Is that so?"
+            show quinn sad sweat
             "Zethe looked intrigued, but Quinn didn't share his attitude."
+            show quinn angry blush -sweat
             q "I-I don't think so. Being powerful is not everything. There's a lot more to life."
+            show quinn angry
+            yuki angry
+            show zethe neutral
             y "Maybe, but—{i}yawn{/i}"
 
 
         "Power is not everything.":
+            yuki angry
             y "Your thinking is childish, Zethe. Power is not everything."
+            show quinn neutral
+            show zethe angry blush
+            yuki
             "Zethe glared."
+            show zethe angry -blush
             z "It does not matter if you believe me childish. The truth remains the truth."
+            show quinn happy
             "Quinn smiled."
             q "I agree, Yuki. You're right. There's a lot more to life than just strength."
+            yuki sad
             y "Yeah, especially since—{i}yawn{/i}"
-
+    yuki sad blush
+    show quinn happy
+    show zethe happy
     "Yuki blushed sheepishly. Quinn giggled, and Zethe smirked."
-    "Yuki felt his eyes close. Perhaps another nap was in order."
 
+    yuki sad
+    "Yuki felt his eyes close. Perhaps another nap was in order."
+    scene black with fade
     return

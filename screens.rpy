@@ -114,8 +114,18 @@ screen say(who, what):
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
     if not renpy.variant("small") and yuki_side_image is not None:
-        # add SideImage() xalign 0.0 yalign 1.0
-        add yuki_side_image
+        if yuki_side_image.endswith(" startle"):
+            add yuki_side_image.rsplit(' ', 1)[0] at startle
+        elif yuki_side_image.endswith(" faint"):
+            add yuki_side_image.rsplit(' ', 1)[0] at faint
+        elif yuki_side_image.endswith(" grrr"):
+            add yuki_side_image.rsplit(' ', 1)[0] at grr
+        elif yuki_side_image.endswith(" show"):
+            add yuki_side_image.rsplit(' ', 1)[0] at shown
+        elif yuki_side_image.endswith(" yell"):
+            add yuki_side_image.rsplit(' ', 1)[0] at yell
+        else:
+            add yuki_side_image
 
 default yuki_side_image = None
 
@@ -138,7 +148,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox.png", xalign=0.5, yalign=1.0, xoffset=20,)
 
 style namebox:
     xpos gui.name_xpos
@@ -225,7 +235,7 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos 405
+    yalign 0.45
     yanchor 0.5
 
     spacing gui.choice_spacing
@@ -252,16 +262,16 @@ screen quick_menu():
         hbox:
             style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
+            xalign 0.597
+            yalign 0.97
 
             textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
+            #textbutton _("Q.Save") action QuickSave()
+            textbutton _("Load") action QuickLoad()
+            textbutton _("History") action ShowMenu('history')
             textbutton _("Prefs") action ShowMenu('preferences')
 
 
@@ -285,6 +295,69 @@ style quick_button_text:
 ################################################################################
 ## Main and Game Menu Screens
 ################################################################################
+## Custom main menu screen
+screen mainnavigation():
+
+    vbox:
+        if not main_menu:
+            style_prefix "navigation"
+        else:
+            style_prefix "mainmenu"
+
+        if main_menu:
+            yalign 0.5
+            xalign 0.75
+        else:
+            xpos gui.navigation_xpos
+
+        yalign 0.5
+
+        spacing gui.navigation_spacing
+
+        if main_menu:
+
+            textbutton _("Start") action Start()
+
+        else:
+
+            textbutton _("History") action ShowMenu("history")
+
+            textbutton _("Save") action ShowMenu("save")
+
+        textbutton _("Load") action ShowMenu("load")
+
+        textbutton _("Preferences") action ShowMenu("preferences")
+
+        if _in_replay:
+
+            textbutton _("End Replay") action EndReplay(confirm=True)
+
+        elif not main_menu:
+
+            textbutton _("Main Menu") action MainMenu()
+
+        textbutton _("About") action ShowMenu("about")
+
+        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+            ## Help isn't necessary or relevant to mobile devices.
+            textbutton _("Help") action ShowMenu("help")
+
+        if renpy.variant("pc"):
+
+            ## The quit button is banned on iOS and unnecessary on Android and
+            ## Web.
+            textbutton _("Quit") action Quit(confirm=not main_menu)
+
+style mainmenu_button is gui_button
+style mainmenu_button_text is gui_button_text
+
+style mainmenu_button:
+    size_group "navigation"
+    properties gui.button_properties("mainmenu_button")
+
+style mainmenu_button_text:
+    properties gui.button_text_properties("mainmenu_button")
 
 ## Navigation screen ###########################################################
 ##
@@ -369,7 +442,7 @@ screen main_menu():
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    use mainnavigation
 
     if gui.show_name:
 
@@ -394,11 +467,11 @@ style main_menu_frame:
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
-    xalign 1.0
-    xoffset -30
+    xalign 0.0
+    xoffset 50
     xmaximum 1200
-    yalign 1.0
-    yoffset -30
+    yalign 0.0
+    yoffset 40
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
@@ -529,14 +602,14 @@ style game_menu_label:
 
 style game_menu_label_text:
     size gui.title_text_size
-    color gui.accent_color
+    color '#a436d7'
     yalign 0.5
 
 style return_button:
     xpos gui.navigation_xpos
     yalign 1.0
-    yoffset -45
-
+    yoffset -100
+    xoffset 95
 
 ## About screen ################################################################
 ##

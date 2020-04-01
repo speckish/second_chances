@@ -14,10 +14,7 @@
 
 layeredimage yuki:
     align (0.0, 1.0)
-    ypos 1005
-    yoffset 75
-    xoffset 150
-    # yoffset 80
+    yoffset 125
     group face:
         attribute neutral default
         attribute angry
@@ -42,8 +39,24 @@ layeredimage zethe:
     attribute sweat
     attribute blush
 
+transform grrr():
+    linear 0.25 alpha 1.0
+
+transform shown():
+    alpha 0.0
+    linear 0.25 alpha 1.0
 
 transform startle():
+    linear 0.15 yoffset -50
+    linear 0.25 yoffset 0
+
+transform faint():
+    parallel:
+        linear 1.0 yoffset 400
+    parallel:
+        linear 1.0 alpha 0
+
+transform grr():
     linear 0.15 yoffset -50
     linear 0.25 yoffset 0
 
@@ -58,7 +71,7 @@ transform seated():
 
 transform yell():
     linear 0.25 yoffset 25
-    easein_bounce 0.5 yoffset 75
+    easein_bounce 0.5 yoffset 0
 
 
 image black = "#000000"

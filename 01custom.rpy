@@ -15,7 +15,6 @@ init -1 python:
             name = file.replace('images/','').replace('/', separator).replace('.png','').replace('.jpg','').strip(separator)
             if conf.get('trimmed', False):
                 name = name.replace(folder, '').strip(separator)
-            glog(name)
             renpy.image(name, im.FactorScale(file, z, bilinear=img_config['bilinear']))
             if "neutral" in name:
                 name = name.replace('neutral','').strip(separator)
