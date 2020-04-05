@@ -600,7 +600,7 @@ label assignment:
             "Yuki remembered he had a massive crush on Quinn."
             yuki happy
             yN "Must suck."
-            "He pat Zethe's shoulder and walked past him wordlessly."
+            "He patted Zethe's shoulder and walked past him wordlessly."
             scene black with fade
             call quinn from _call_quinn
 
@@ -780,4 +780,45 @@ label research:
     yN "I failed last time. It won't happen again."
     scene black with fade
     yuki None
+
+    "Although this experiment was a failure, it wasn't the only thing occupying Yuki's mind."
     return #?
+
+label finalMother:
+    "A significant amount of time passed. It was nearing the end of the year, yet "
+    "Yuki sat down at his desk. Once again, his eyes flitted to the calendar."
+    "He tapped his foot."
+    y "How much longer..."
+    "Finally, the messenger note on his wall began to chime."
+    y "..."
+    "Blankly, Yuki accepted it."
+    y "...Mother."
+    mom "Yuki."
+    "Yuki stared at her blankly. He spent the last few days tired and exhausted. He couldn't muster up the energy to cry."
+    mom "It's going to happen soon. I'm going to pass on."
+    y "I see."
+    mom "I do not like the look in your eye."
+    y "...What?"
+    mom "Do not do anything foolish, boy."
+    y "I'm not."
+    mom "I believe in you. You will not do anything reckless."
+    #possible dialogue choice
+    y "...Very well."
+    "Yuki felt miserable lying to his mother, but he didn't want her to worry."
+    "They talked for an hour about mundane things: what was happening in the village and all the local gossip."
+    mom "{i}cough{/i}"
+    y "Mother!"
+    "Yuki instictively reached out, before realizing he couldn't."
+    mom "My boy. I love you."
+    "Yuki felt hot tears pool up in his eyes."
+    y "I-I love you too. Always and forever."
+    "The line cut."
+    "Yuki got up from his chair, and hurried. There wasn't much time left."
+
+    #lab
+    "Yuki stood in his lab. The preparations took longer than he'd originally expected, and his Mother was about to pass in a few hours."
+    "He took a deep breath."
+    "Yuki clutched the amulet tightly in his palm. Yuki raised his hands and opened his mouth to chant."
+    "Suddenly, he heard a voice call out to him."
+
+

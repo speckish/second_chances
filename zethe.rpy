@@ -46,8 +46,6 @@ label zethe:
     "Since they'd finally agreed on a subject, Yuki smiled."
     yN "This might actually work out..."
 
-    call research from _call_research
-
     scene bg dorm
     show zethe
     with fade
@@ -108,6 +106,9 @@ label zethe:
     "He yanked his arm away."
     y "S-Sorry. I'll be going for a bit."
     call .kiss from _call_zethe_kiss
+    call research from _call_research
+    call .fun
+    
     return
 
 label .kiss:
@@ -156,7 +157,7 @@ label .kiss:
     "Yuki started to say something, but was quickly interrupted."
     yuki shocked blush
     z "I love you."
-    yN "(W-What?!)"
+    yN "W-What?!"
     show zethe sad blush
     z "I love you, Yuki. There's just something about you that drives me crazy."
     yuki shocked blush sweat
@@ -222,3 +223,44 @@ label .accept:
     yN "(Is this what being in love is like...?)"
     scene black with fade
     return
+
+label .fun:
+    "The next few weeks were incredibly exciting."
+    "Zethe took Yuki to incredibly wild, exotic places. They went to magic shows, concerts, and even live sporting arenas."
+    "Yuki and Zethe stumbled back into Yuki's dorm, gasping for air."
+    y "You... are... crazy."
+    "Zethe smirked tiredly."
+    z "Not as... crazy.. as... you...!"
+    "Yuki collapsed on the bed, Zethe followed suit next to him."
+    y "Move. This bed is not big enough."
+    z "You move."
+    y "This is my dorm!"
+    z "Don't care."
+    "Yuki glared at Zethe, who was unaffected by it."
+    y "You're so... ugh."
+    "Zethe leaned over and kissed Yuki. Yuki felt his exhaustion melt away and leaned into it."
+    y "Mm..."
+    "A rush of pleasure rushed to Yuki's head as he slowly broke the kiss."
+    y "...You're lucky I'm so forgiving."
+    z "Sure."
+    y "What were you thinking, setting the statue in Main Square on fire?!"
+    z "That was an accident!"
+    y "Hmph. That would've never happened if I was there."
+    z "Suuure."
+    "Zethe dragged out the words slowly."
+    y "You..."
+    "Yuki pinched Zethe's nose."
+    z "Ow!"
+    y "You deserve that. My feet hurt."
+    "Zethe just laughed and pulled Yuki into a kiss."
+    "Yuki obliged. He was happier than he'd ever been in his entire lifetime."
+    "Recalling the past, Yuki pulled back sharply."
+    z "What's wrong?"
+    "Yuki rubbed his forehead."
+    y "I-It's nothing. Sorry just... a little tired today."
+    "Zethe looked suspicious but didn't press the issue."
+    z "If you say so..."
+    "Although Yuki was incredibly happy, a sense of fear bubbled inside. But he ignored it for now."
+    y "I meant it. Come here."
+    "Yuki pulled Zethe into tight hug."
+    yN "Everything will work out. I swear it."
