@@ -821,4 +821,6 @@ label finalMother:
     "Yuki clutched the amulet tightly in his palm. Yuki raised his hands and opened his mouth to chant."
     "Suddenly, he heard a voice call out to him."
 
+    #call respective LI
+
 

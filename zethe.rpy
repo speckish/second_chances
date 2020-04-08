@@ -108,6 +108,7 @@ label zethe:
     call .kiss from _call_zethe_kiss
     call research from _call_research
     call .fun
+    call finalMother
     
     return
 
@@ -264,3 +265,131 @@ label .fun:
     y "I meant it. Come here."
     "Yuki pulled Zethe into tight hug."
     yN "Everything will work out. I swear it."
+
+label .ending:
+    "Zethe stood in the doorway, his face flushed from exertion."
+    z "What are you doing, you complete and utter fool! Stop this madness!"
+    "Yuki looked at him, shocked."
+    y "...What are you doing here?"
+    z "I saw your notes, you idiot! Stop this! You'll DIE!"
+    "Yuki narrowed his eyes."
+    y "I knew it. You think I'm too weak to do it, right?"
+    "Zethe raised his fist in frustration."
+    z "No, I {i}know{/i} that this is a futile plan!"
+    "Yuki felt agitated. This was supposed to be the final spell, the one that would save his mother."
+    "He glanced at Zethe. If he didn't cast the spell now, it would be too late."
+    "Yuki decided..."
+
+    menu: 
+        "To cast the spell":
+            goto .bad
+        "Not to cast the spell":
+            goto .good
+
+label .bad:
+    "Yuki squeezed his eyes shut."
+    y "I have to do this."
+    "He took in a deep breath and began chanting."
+    y "w̸̧͖̩͕̰̋̈̂̈́́͗̽̇͝͝a̸̤̮̹̳̭͖͂̐̋̿̑̅̆̒͌͊̚͠͠ẹ̴̛͐́̑̈́̐̅̿͠ȑ̵̨͚͈͙̻͍̘̪̭̟̩̦̟̓̄͒͛̌͗̑̔f̴̡̟̪͎̦̣͔̖̫̯͈́͆́́̈́̈́̋̏͐́̓̐͛̉ǧ̷̜̬̽̒̎͗̃͑̋̿́̅͆͝d̷͙̹͈͈͚̣̳̰̒̍͂̉͒͑͋͑̈́̋͝ͅt̷̡̟̯̜̹̲̜͙̦̽̄̍̀͠f̷̧̨͕̤͒̀h̷̝̖͙͕͔̰̣͓̿̅̀̓̃̄͘͜͝͝ỳ̶͚̬͙̹̏̄̇͋̃̽̔̏͝͝͝ͅġ̶̥͖͖̻̞͖͇̹̹̍̇j̶͎̼̹̜͕̟̭̼̦͊̓̽̿̔̒̔̀k̵̨̳̘̠̥̳͚͌́̒̆͜͝ḣ̷̨̖͔̣́̅̒̿̍̔͋̂̀̽̈̒͘ͅg̸̙̜̟̼̺͍̫̦͗̐f̶̣̰̖͈̔̎̐d̶̤̱̯̮͇̦̜̾̆̉̈́͌̀͛͋͘͝s̷̨̨̖̫̀̐̐̆̒͆̄a̶̲̞̖͓̬͈͈̻̔͒͊̾͌̕͜s̴̡̜̫̼̼̔͑c̷̨͕̙̺̻̜̲̦̠̥͖͎͋͠d̸̛̤̬̹̭͙͂̀͑͐̒̑̽͛́̿͗̄̊͘v̶̢̛͉̠̳͚̘̀̈̊̈́̂̽̌́̈́̓̑̊͘̚b̵̡̧̛͚̰̗̘̼͔͇̜̦̮̉͒̾̔̽̀͘͠͝ͅṅ̶̥̯͉̥̪̜̓̈̄̎͒̅̀͋̈́͝ͅ ̶̨̡̙̘̤̭̖̥̻̥̖̗̈́͆͊̈́̎͐̅̈̄͘͘͠"
+    
+    
+    z "NO! YUKI!!"
+    "Yuki squeezed his eyes shut. He couldn't bear to see Zethe's face."
+    "He braced for the inevitable flare of pain, but nothing came."
+    yN "What...?"
+    yN "Don't tell me...! It failed?"
+    "Yuki slowly opened one eye. Then the other."
+    "Zethe laid on the floor next to Yuki, unmoving."
+    y "Zethe...? ZETHE?!"
+    "Yuki grabbed Zethe's shoulders and cradled him in his arms."
+    y "What did you do... Don't tell me..."
+    "Yuki felt hot tears pool up in his eyes."
+    z "YOU MORON!"
+    "Zethe cracked a tiny smile."
+    y "Even now... you're... so..."
+    y "No... why did you take on the spell's recoil?!"
+    z "I... had... to. I had to protect..."
+    "Zethe's eyes fluttered. Yuki felt Zethe's soul flee."
+    y "NO!!!"
+    "Yuki screamed in agony. His heart beat erratically, and his throat was dry."
+    y "I love you! I love you, Zethe. You can't...!"
+    z "I... love you... too. Forever."
+    y "Zethe?!"
+    "When Zethe didn't respond, Yuki's instincts kicked in. He moved healing magic through his palms."
+    y "{i}Maior mederi vulneribus!{/i}"
+    "In the back of his mind, Yuki knew it was futile. But he couldn't stop himself."
+    y "{i}Maior mederi vulneribus!{/i}"
+    z "Yuki..."
+    "Zethe's voice was far away. His skin turned pale."
+    y "Just hang in there, okay?! It will be—"
+    "Yuki stopped himself."
+    yN "His soul is..."
+    "It was gone. Zethe's soul had passed."
+    y "NO!!"
+    "Yuki cried, holding Zethe's limp body close."
+
+    # epilogue
+    "Yuki sat in his cabin."
+    cat "..."
+    "He stared off into the window."
+    "Although the spell had saved his Mother, the shock of losing Zethe changed Yuki forever."
+    "He was a broken man."
+    y "..."
+    "Yuki had no emotion left in him."
+    "But still, he felt a void in his chest. One that would never be filled." 
+    "A picture of Zethe was on the table, next to Yuki."
+    y "..."
+    y "Who... who am I?"
+    "Yuki clutched his head in pain."
+    y "AAAAAAAAAH!!!"
+    "His body shook relentlessly."
+    y "I... I don't...!!"
+    "He stared at his hands."
+    y "Who... am I?"
+    yN "What... what is my name?"
+    # Change Yuki's name to ???
+    "████ stared at his palms."
+    y "My... my name is..."
+    "In terror, ████ looked around the room."
+    y "I'm... I'm...!"
+    "Realizing something, ████ dropped his palms."
+    y "It doesn't matter... does it. Who I am..."
+    "████ felt painful emotions in his chest surface. But he couldn't remember why he felt it. Or what made him feel that way."
+    "All ████ knew was, staying among others would only cause everyone more suffering."
+    yN "This is for the best."
+    cat "..."
+    cat "Unable to see himself repeating past mistakes. Making himself miserable despite a second chance."
+    cat "Humans are truly pathetic creatures."
+
+label .good:
+    "Yuki stared at Zethe."
+    "Finally, Yuki sighed and dropped his hands."
+    y "...Very well."
+    "Zethe rushed into the room and tightly grabbed Yuki."
+    y "Can't... breathe..."
+    "Zethe loosened his hold on Yuki slightly."
+    z "I... I am so glad...!"
+    "Yuki looked up at Zethe, his eyes filled with tears."
+    y "I-I...!"
+    "Zethe grabbed the back of Yuki's waist and pulled him close."
+    z "It is okay. It is okay now."
+    "Zethe's kind words felt strange to Yuki's ears. But he accepted them."
+    y "I-I just wanted her to live!"
+    z "I know! I know. But as a magician, you should know better than anyone Yuki... that death is—"
+    y "Inevitable! I know. Of course I do. I also know that she's going to a better place and—"
+    z "But you wanted her to live."
+    "Zethe's eyes were teary, filled with understanding. Yuki couldn't bear looking at him, and buried his face in Zethe's chest."
+    "Zethe roughly stroked Yuki's hair."
+    z "I love you. So you cannot die on me, okay?!"
+    "Zethe tried to keep his voice steady, but a tremble betrayed his desperation."
+    y "You're a strange one."
+    z "S-Shut up. Don't try to act tough. I know... I know this is hard on you."
+    "Yuki began to cry."
+    y "I... I just..."
+    z "It is fine. Whether you will it or not, you are stuck with me forever."
+    z "Let us go now, before it becomes suspicious."
+    "Zethe and Yuki left the lab. Yuki's body was physically drained, but Zethe carried him back."
+
+    # epilogue
+    "Five years later..."
+    "Yuki stood next to the "
