@@ -1,28 +1,39 @@
 label cafeteria:
     yuki None
+    stop music fadeout 1.0
     "The next few weeks passed by quite uneventfully."
     "Yuki easily breezed through all his classes, with nothing interesting of note happening."
-    play sound "audio/meow_1.mp3"
+    show bg yukis_dorm day
+    show cat smirk:
+        align (0.5, 0.5)
+    with dissolve
     cat "..."
+    yuki shocked
+    play music "audio/tea-time_loop.ogg" fadein 1.0
     y "Don't look at me like that!"
     play sound "audio/meow_3.mp3"
+    show cat laugh
     cat "Is this why I gave you a second life?"
+    show cat smirk
     y "I don't know! I didn't even ask for this!"
-    play sound "audio/meow_2.mp3"
+    show cat smug
     cat "But it's what you wanted."
     y "I-I..."
     "Yuki couldn't deny her words. It was true, this was what he wanted."
     play sound "audio/meow_4.mp3"
+    show cat smirk
     cat "Don't waste it. You won't get another."
     y "..."
-    scene bg lab with fade
+    scene black with fade
     yuki None
     "Yuki spend the past few weeks doing his very best to avoid both Zethe and Quinn. He felt a gutteral response whenever he was around them."
+    show bg yukis_dorm day with fade
     yuki sad show
     "Sighing, he walked to the bookshelf in the corner of his room and pulled out his book of Vednore perks."
+    yuki sad
     "He flipped through the pages."
     yN "The one I'm looking for is—"
-    yuki shocked  blush startle
+    yuki shocked blush
     y "Ow!"
     yuki startle
     "Yuki flinched and dropped the book on the ground."
@@ -54,17 +65,21 @@ label cafeteria:
     yuki sad
     "That meant he actually had to go to the cafeteria. Like in person. And interact with other humans."
     play sound "audio/meow_2.mp3"
+    show cat smirk:
+        align (0.5, 0.5)
+    with dissolve
     cat "Well, well, well."
     yuki angry
     y "You sure are enjoying this."
     play sound "audio/meow_4.mp3"
+    show cat smile
     cat "Of course I am. Have fun!"
     yuki sad
     "Yuki grumbled and made his way to the cafeteria."
     scene black with fade
     pause 0.0
     yuki None
-    scene cafeteria with fade
+    scene bg cafeteria day with fade
     "Yuki got his food on a tray. He precariously held it so as not to aggrevate his already painful wrist."
     yuki sad
     "Looking around, all the seats were taken. Except ones next to Zethe and Quinn."
@@ -195,7 +210,7 @@ label cafeteria:
             "He didn't want Quinn to worry about him. He closed his eyes for a second and opened them."
             scene black with fade
             pause 0.0
-            scene bg cafeteria
+            scene bg cafeteria day
             show quinn neutral at center
             with fade
             yuki sad
@@ -236,6 +251,7 @@ label cafeteria:
 label library:
     scene black with fade
     yuki None
+    play music "audio/Nostalgia_loop.ogg" fadein 1.0
     "A few more weeks passed."
     "The classes began to get a lot tougher. Considering he'd been out of college for a while, Yuki struggled to remember everything."
     "So, he found himself spending more and more time at the library."
@@ -246,16 +262,21 @@ label library:
     yuki sad
     "Yuki furrowed his brow in concentration as he read, 'Lola: My First Guardian Spirit.' to himself."
     play sound "audio/meow_5.mp3"
+    aurelia smirk
     cat "Are you kidding me?"
     yuki angry
+    aurelia neutral
     yN "Shh! I'm doing research."
     yuki sad
     "Yuki read the contents of the book to himself. It was a book about a Guardian Spirit who helps out a crying child in his quest for greatness."
+    aurelia smirk
     "Aurelia looked suspiciously at the book in Yuki's hands. It was comprised mostly of colorful images and baby speech."
     play sound "audio/meow_1.mp3"
     yuki
+    aurelia smug
     cat "This is why I didn't want to bother with mortals."
     yuki blush
+    aurelia None
     z "It appears that our class prodigy has taken to reading children's books in his spare time."
     "Yuki ignored the voice and continued reading."
     z "I said—"
@@ -371,14 +392,16 @@ label library:
     yN "I should go home and sleep on it."
     yuki None
     play sound "audio/meow_1.mp3"
+    aurelia smirk
     "Aurelia sat in the corner, her tail wagging in interest."
+    aurelia None
     scene black with fade
     return
 
 label mother_call:
     scene black with fade
     yuki None
-    scene bg lab with fade
+    scene bg yukis_dorm evening with fade
     "A few more days passed. Yuki sat in his room working on a particularly difficult assignment. Aurelia was in the corner, curled up and snoring loudly."
     yuki sad
     "But Yuki couldn't concentrate. His hands shook as he tried to read the words on his notebook."
@@ -475,7 +498,7 @@ label mother_call:
     return
 
 label assignment:
-    scene bg classroom with fade
+    scene bg classroom evening with fade
     "Yuki sat in the classroom, nervous. It was the final class of the day."
     yuki
     "He tapped his finger on the desk. The past few weeks, he'd been researching various healing techniques."
@@ -513,8 +536,8 @@ label assignment:
         "Make a magical product with Quinn":
             yuki blush
             "It was a different timeline, but Yuki still deeply cared about Quinn. Maybe even deeper now that he knew her true nature."
-            # claaroom dusk
             yuki
+            scene bg hallway evening with fade
             "After class, Yuki waited in the hallway for Quinn to come out."
             show quinn shocked at offscreenleft
             pause 0.0
@@ -578,7 +601,7 @@ label assignment:
             # play sound "audio/steps.mp3"
             yuki None
             "After exchanging Holo Note information and discussing timings, Yuki made his way back to his dorms."
-            scene lab #dorm?
+            scene bg yukis_dorm evening
             show zethe at center
             with fade
             z "..."
@@ -608,6 +631,7 @@ label assignment:
             yuki happy
             "Yuki knew he was up for a new challenge. And he knew just the person to take it on with."
             yuki
+            scene bg hallway evening with fade
             "After class, Yuki stood outside the door. He watched various students shuffle out and discuss different ideas."
             show zethe at offscreenright
             pause 0.0
@@ -701,7 +725,7 @@ label assignment:
             "After splitting ways with Zethe, Yuki sees Quinn in the hallway."
             q "Yuki?"
             y "Oh hello, Quinn."
-            show quinn neutrual
+            show quinn neutral
             q "Hi. I was um... just wondering if you hand a partner for the final project?"
             yuki sweat
             "Yuki blinked."
@@ -780,17 +804,24 @@ label research:
     yN "I failed last time. It won't happen again."
     scene black with fade
     yuki None
-
     "Although this experiment was a failure, it wasn't the only thing occupying Yuki's mind."
-    return #?
+    return
 
 label finalMother:
+    scene black with fade
+    yuki None
     "A significant amount of time passed. It was nearing the end of the year, yet "
+    scene bg yukis_dorm day with fade
+    yuki sad
     "Yuki sat down at his desk. Once again, his eyes flitted to the calendar."
     "He tapped his foot."
+    yuki sad blush sweat
     y "How much longer..."
+    yuki shocked sweat startle
     "Finally, the messenger note on his wall began to chime."
+    yuki sad sweat
     y "..."
+    yuki
     "Blankly, Yuki accepted it."
     y "...Mother."
     mom "Yuki."
@@ -798,29 +829,40 @@ label finalMother:
     mom "It's going to happen soon. I'm going to pass on."
     y "I see."
     mom "I do not like the look in your eye."
+    yuki sad sweat
     y "...What?"
     mom "Do not do anything foolish, boy."
+    yuki sad
     y "I'm not."
     mom "I believe in you. You will not do anything reckless."
     #possible dialogue choice
+    yuki
     y "...Very well."
+    yuki sweat
     "Yuki felt miserable lying to his mother, but he didn't want her to worry."
+    yuki
     "They talked for an hour about mundane things: what was happening in the village and all the local gossip."
     mom "{i}cough{/i}"
+    yuki shocked startle
     y "Mother!"
+    yuki shocked
     "Yuki instictively reached out, before realizing he couldn't."
+    yuki sad
     mom "My boy. I love you."
+    yuki sad blush
     "Yuki felt hot tears pool up in his eyes."
     y "I-I love you too. Always and forever."
+    yuki shocked
     "The line cut."
+    yuki sad
     "Yuki got up from his chair, and hurried. There wasn't much time left."
-
-    #lab
+    scene lab with fade
+    yuki None
     "Yuki stood in his lab. The preparations took longer than he'd originally expected, and his Mother was about to pass in a few hours."
+    yuki sad
     "He took a deep breath."
+    yuki
     "Yuki clutched the amulet tightly in his palm. Yuki raised his hands and opened his mouth to chant."
+    yuki shocked startle
     "Suddenly, he heard a voice call out to him."
-
-    #call respective LI
-
-
+    return

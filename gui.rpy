@@ -199,6 +199,7 @@ define gui.quick_button_text_size = 22
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_hover_color = gui.hover_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
+define gui.quick_button_text_outlines = [(absolute(1), "#000")]
 
 ## You can also add your own customizations, by adding properly-named variables.
 ## For example, you can uncomment the following line to set the width of a
@@ -319,6 +320,7 @@ define gui.frame_tile = False
 define gui.bar_size = 38
 define gui.scrollbar_size = 18
 define gui.slider_size = 38
+# define gui.slider_thumb_offset = 7
 
 ## True if bar images should be tiled. False if they should be linearly scaled.
 define gui.bar_tile = False
@@ -434,31 +436,38 @@ init python:
     if renpy.variant("small"):
 
         ## Font sizes.
-        gui.text_size = 45
-        gui.name_text_size = 35
-        gui.notify_text_size = 38
-        gui.interface_text_size = 45
-        gui.button_text_size = 45
-        gui.label_text_size = 51
+        gui.text_size = 44
+        # gui.name_text_size = 35
+        # gui.notify_text_size = 38
+        # gui.interface_text_size = 45
+        # gui.button_text_size = 45
+        # gui.label_text_size = 51
 
         ## Adjust the location of the textbox.
-        gui.textbox_height = 360
-        gui.name_xpos = 120
-        gui.text_xpos = 135
-        gui.text_width = 1650
+        # gui.textbox_height = 360
+        # gui.name_xpos = 120
+        # gui.text_xpos = 135
+        gui.dialogue_ypos = -2
+        # gui.text_width = 1650
+
+
+#7d3d7e , #4c316a);
+
+
+
 
         ## Change the size and spacing of various things.
-        gui.slider_size = 54
+        # gui.slider_size = 54
 
-        gui.choice_button_width = 1860
+        # gui.choice_button_width = 1860
 
-        gui.navigation_spacing = 30
-        gui.pref_button_spacing = 15
+        # gui.navigation_spacing = 30
+        # gui.pref_button_spacing = 15
 
-        gui.history_height = 285
-        gui.history_text_width = 1035
+        # gui.history_height = 285
+        # gui.history_text_width = 1035
 
-        gui.quick_button_text_size = 30
+        # gui.quick_button_text_size = 32
 
         ## File button layout.
         gui.file_slot_cols = 2
@@ -479,6 +488,3 @@ init python:
 
         gui.nvl_button_width = 1860
         gui.nvl_button_xpos = 30
-
-
-

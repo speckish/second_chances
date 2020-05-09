@@ -1,14 +1,15 @@
 ﻿# Declare characters used by this game.
-define y = Character("Yuki")
+default yuki_name = "Yuki"
+define y = Character("yuki_name", dynamic=True)
 define z = Character("Zethe")
 define q = Character("Quinn")
 define mom = Character("Mother")
 define prof = "Professor"
 
 # This refers to his narration.
-define yN = Character("Yuki", what_italic=True, what_suffix=")", what_prefix="(")
-define cat = Character("Cat", what_italic=True)
-# TODO: Make cat dynamic
+define yN = Character("yuki_name", what_italic=True, what_suffix=")", what_prefix="(", dynamic=True)
+default cat_name = "Cat"
+define cat = Character("cat_name", what_italic=True, dynamic=True)
 
 define he = "he"
 define hed = "he'd"
@@ -21,10 +22,14 @@ define His = "His"
 
 default passed = True
 
+init python:
+    config.main_menu_music = "audio/tea-time_loop.ogg"
+
 label start:
     # "<This line is here for testing.>"
     call hook from _call_hook
-    scene bg yukis_cabin_inside morning with fade
+    scene bg yukis_cabin_inside closed_door with fade
+    play music "audio/Forgotten-Place_loop.ogg" fadein 1.0
     yuki
     "Yuki stared out the window."
     yuki sad
@@ -53,8 +58,10 @@ label start:
     yuki shocked sweat
     y "That's definitely not my imagination."
     yuki
+    scene bg yukis_cabin_inside open_door with dissolve
     "Yuki quickly walked across [his] cabin and opened the door."
-    play sound "audio/meow_3.mp3"
+    show cat shadow flip with dissolve:
+        align (0.5, 0.5)
     yuki shocked
     y "Why is a cat here?"
     yuki shocked sweat
@@ -122,59 +129,75 @@ label start:
     "Yuki felt frustration bubble in [his] chest. [He] knew there was nothing [he] could do now that wouldn't make it worse."
     yuki shocked
     "Then [he] suddenly remembered."
-    yuki shocked blush
+    yuki shocked blush startle
     play sound "audio/kettle_whistle.mp3"
     y "Crap, the kettle!"
-    yuki shocked
+    yuki shocked flip
+    show cat shadow flip at offscreenright with move
     play sound "audio/steps.mp3"
+
     "[He] ran back to the kitchen to inspect the damage. Since [he] didn't close the kettle, the water boiled over and burnt the countertop."
-    yuki angry
+    yuki angry flip
     y "What a mess..."
-    yuki sad
+    yuki sad flip
     "[He] grabbed a washcloth and began to wipe away the messy burns. Thankfully [hed] fireproofed the kitchen, ensuring the damage wasn't worse."
     play sound "audio/meow_1.mp3"
-    yuki
+    yuki flip startle
     "Yuki jolted."
-    yuki shocked
+    yuki shocked flip
     y "That sound..."
     play sound "audio/steps.mp3"
+    yuki shocked
+    show cat shadow with move:
+        align (0.5, 0.5)
+    pause 0.25
+    show cat neutral with dissolve
     "[He] ran back to the desk and saw the kitten sitting up straight, looking completely unhurt."
     yuki angry
     y "You're alright!"
     yuki
-    play sound "audio/meow_1.mp3"
+    show cat smile
     cat "Yes, I am. Thank you mortal."
     yuki shocked
+    show cat neutral
     "Yuki jumped in shock."
     y "Y-You're talking?!"
     play sound "audio/meow_4.mp3"
+    show cat smirk
     cat "Hmph. Is there something so wrong with that?"
     yuki sad
+    show cat neutral
     y "N-No, it's just that... I'm pretty sure animals don't talk."
+    show cat smile
     yN "Except for Guardian Spirits, but they're supposed to be fictional!"
+    show cat neutral
     "Yuki shook [his] head."
     yuki
     y "So uh, since you apparently talk, mind telling me what got you here in this neck of woods?"
-    "Yuki was fully certain that there were no animals living near [his] cabin. [His] magic wards made sure of it.
+    "Yuki was fully certain that there were no animals living near [his] cabin. [His] magic wards made sure of it."
     yuki sad
-    But recently [hed] been slacking off, which might've explained why there was a cat."
+    "But recently [hed] been slacking off, which might've explained why there was a cat."
     yuki
     play sound "audio/meow_3.mp3"
+    show cat smug
     cat "Hmph. I was looking to help humans, but they just called me a monster and attacked me!"
+    show cat smirk
     "The cat looked at me curiously."
     yuki sad
-    play sound "audio/meow_1.mp3"
     cat "But you're not like most mortals, are you?"
     "Yuki shuddered under the cat's scrutinous gaze."
     y "I'm... uh..."
     "[He] struggled to formulate words. It'd been a decade since he spoke to a human, how was he going to talk to a cat?!"
     yuki
+    show cat neutral
     "The cat continued."
     play sound "audio/meow_3.mp3"
+    show cat happy
+    $ cat_name = "Aurelia"
     cat "My name is Aurelia Cornelius the 4th. But you can call me Aurelia. You've earned the honor!"
     yuki shocked
     y "The... honor?"
-    play sound "audio/meow_2.mp3"
+    show cat neutral
     cat "Yes. As a Guardian Spirit, I have the duty to grant one true desire of the mortal that saved me."
     yuki sad
     y "Is that so?"
@@ -186,10 +209,12 @@ label start:
             y "I'll have eternal youth."
             yuki
             play sound "audio/meow_1.mp3"
+            show cat smug
             cat "What a typical wish."
             yuki sad
-            play sound "audio/meow_3.mp3"
+            show cat smirk
             cat "You realize that when you die all alone in this tiny shack, it doesn't matter if you look gorgeous while doing it?"
+            show cat smug
             yuki angry
             y "H-Hey!"
             yuki sad
@@ -200,11 +225,13 @@ label start:
             y "I'll have unlimited money."
             yuki
             play sound "audio/meow_1.mp3"
+            show cat smug
             cat "What a typical wish."
             yuki sad
-            play sound "audio/meow_3.mp3"
+            show cat smirk
             cat "No matter how much money you have, there's no way you can spend it living in this tiny hut."
             yuki angry
+            show cat smug
             y "H-Hey!"
             yuki sad
             "Yuki knew her words were true, but that didn't stop them from stinging [his] heart."
@@ -215,14 +242,17 @@ label start:
             yuki happy
             y "Infinite wishes."
             yuki
+            show cat smug
             play sound "audio/meow_1.mp3"
             cat "What a typical wish."
             yuki sad
-            play sound "audio/meow_3.mp3"
+            show cat smirk
             cat "If I had enough power to grant you infinite desires, I wouldn't be lying injured near your tiny shack."
             yuki angry
+            show cat neutral
             y "It's not a shack, it's a cabin! And I prefer to call it 'cozy.'"
             yuki sad
+            show cat smirk
             "Aurelia narrowed her eyes, so I decided not to challenge her words further."
 
     call wish_granted from _call_wish_granted
@@ -237,24 +267,31 @@ label start:
 
 label wish_granted:
     yuki angry
+    show cat neutral
     y "But you were supposed to grant my wish!"
     yuki sad
+    show cat smug
     "Aurelia shook her head. I didn't know it was possible for a cat to look so disappointed, but Aurelia pulled it off well."
     yuki
-    play sound "audio/meow_2.mp3"
+    show cat smile
     cat "Although I can grant human desires, there are two clauses."
+    show cat neutral
     cat "The desire must be within my power. Although I'm really strong—"
     yuki angry
     "Yuki coughed."
     yuki
     play sound "audio/meow_5.mp3"
+    show cat smirk
     cat "AHEM. I still have limits. And the second is..."
     "Yuki looked at Aurelia in anticipation."
     yuki sad
     y "The second is?"
     yuki shocked
     play sound "audio/meow_1.mp3"
+    show cat neutral
+    stop music fadeout 1.0
     cat "The human can't decide the wish."
+    show cat smile
     y "Wha—"
     play sound "audio/eerie_wind.mp3"
     yuki shocked blush
@@ -265,15 +302,18 @@ label wish_granted:
     yuki shocked blush
     "[He] looked around, but [his] cabin was gone. Instead, he saw [himself] floating in the sky, the wind wrapping around him."
     y "Where—"
+    show cat neutral with dissolve:
+        align (0.5, 0.5)
     cat "This is your mind, human. Clearly it is turbulent..."
     "Yuki felt the most inner, vulnerable parts of [himself] coming to the surface."
     yuki angry blush
     y "No... NO! STOP! STOP RIGHT NOW!"
     "Yuki frantically waved [his] arms around, trying to stop the onslaught of emotions threatening to choke [him]."
     yuki shocked blush
+    show cat smug
     "Aurelia looked almost sympathetic, but didn't stop."
+    show cat neutral
     "She sighed and looked Yuki in the eye."
-    play sound "audio/meow_1.mp3"
     cat "Your greatest desire is in my power but... it's going to be troublesome."
     yuki angry blush
     y "What are you—?!"
@@ -286,7 +326,8 @@ label first_day:
     "Yuki felt dizzy and confused."
     yuki shocked
     yN "Where... where am I?"
-    scene bg school with fade
+    scene bg school day with fade
+    play music "audio/Nostalgia_loop.ogg" fadein 1.0
     "[He] looked around. He was sitting under a large, shady tree. From the corner of his eye, he saw college students hurridly walking."
     yuki sad
     "Some were casting low-level magic spells, causing haphazard accidents. Others were frantically scribbling through notebooks."
@@ -341,38 +382,43 @@ label first_day:
     yN "Am I... in the past?"
     play sound "audio/meow_5.mp3"
     cat "Ding ding ding! You're correct!"
-    yuki shocked
+    yuki shocked flip startle
     "Yuki whipped his head around, trying to find the source of the voice. The people around him started whispering to each other, staring at him."
     yuki sad blush
     "He blushed, feeling embarrased."
     play sound "audio/meow_1.mp3"
+    aurelia neutral
     cat "I'm {i}inside{/i} your head, don't you realize?"
     yuki sad
     y "Uh..."
-    play sound "audio/meow_2.mp3"
+    aurelia smirl
     cat "Because of this, I'm stuck in the past too. How annoying."
     yN "S-Sorry?"
     "It felt strange to be talking to a voice inside his head."
     yuki shocked
     play sound "audio/meow_6.mp3"
+    aurelia happy
     cat "Now, hurry up and get to class before things get bad!"
     yuki neutral
+    aurelia neutral
     yN "Okay, okay... so bossy..."
     play sound "audio/steps.mp3"
     scene black with fade
     yuki None
+    aurelia None
     return
 
 label hook:
+    stop music fadeout 1.0
+    pause 1.0
     scene black with fade
-    play sound "audio/quinn_gasp.mp3"
-    pause 0.85
     play sound "audio/glass_break.mp3"
     pause 0.5
     scene lab
     show quinn sad
     with fade
     pause 0.25
+    play music "audio/Rest-In-Peace_loop.ogg" fadein 1.0
     q "I don't love you."
     yuki angry
     "Yuki reeled back in shock."
@@ -415,7 +461,7 @@ label hook:
     return
 
 label classroom:
-    scene classroom with fade
+    scene bg classroom day with fade
     prof "As it is currently the first class of the year, we are beginning with a test of skill."
     yuki
     "Yuki knew exactly what this so called \"test\" was supposed to do."
@@ -532,12 +578,14 @@ label classroom:
     suspicions."
     show zethe neutral
     show quinn neutral
-    "He could also refuse to do a powerful spell, instead opting for something simple. This would impress the Professor and get him in his good graces, but would make him more suspicious."
+    "He could also refuse to do a powerful spell, instead opting for something simple."
+    "This would impress the Professor and get him in his good graces, but would make him more suspicious."
     show quinn sad
     yN "What should I do?"
 
     menu:
         "Cast a powerful and flashy spell.":
+            play music "audio/Are-you-kidding_loop.ogg" fadein 1.0
             $ passed = False
             yuki sad
             "Yuki's specialization during school was healing. Considering there was nothing to heal, it was best to try something more flashy."
@@ -626,6 +674,7 @@ label classroom:
             y "Careful what you wish for."
 
         "Refuse and cast a basic spell.":
+            play music "audio/Forgotten-Place_loop.ogg" fadein 1.0
             yuki
             "Yuki shook his head. He wasn't about to fall for the bait."
             "He took a deep breath and held out his palm."
@@ -724,14 +773,13 @@ label classroom:
     return
 
 label infirmary_start:
+    stop music fadeout 10
     yuki sad blush faint
     '...'
     yuki None
     scene black with fade
     play sound "audio/thud.mp3"
     pause 0.5
-    play sound "audio/quinn_gasp.mp3"
-    pause 0.25
     yuki None
     "There was a loud thud when Yuki's body hit the floor."
     yuki sad
@@ -739,6 +787,7 @@ label infirmary_start:
     "Yuki tried to open his eyes, but they felt like lead."
     z "Is he ever going to wake up?"
     q "D-Don't say something like that!"
+    play music "audio/Nostalgia_loop.ogg" fadein 1.0
     yuki shocked
     scene bg infirmary afternoon
     show quinn sad blush at one_two

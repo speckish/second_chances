@@ -110,11 +110,12 @@ screen say(who, what):
 
         text what id "what"
 
-
-    ## If there's a side image, display it above the text. Do not display on the
-    ## phone variant - there's no room.
-    if not renpy.variant("small") and yuki_side_image is not None:
-        if yuki_side_image.endswith(" startle"):
+    # if not renpy.variant("small") and yuki_side_image is not None:
+    if yuki_side_image is not None:
+        if yuki_side_image.endswith(" flip startle"):
+            add yuki_side_image.rsplit(' ', 2)[0] at startle:
+                xzoom -1.0
+        elif yuki_side_image.endswith(" startle"):
             add yuki_side_image.rsplit(' ', 1)[0] at startle
         elif yuki_side_image.endswith(" faint"):
             add yuki_side_image.rsplit(' ', 1)[0] at faint
@@ -122,12 +123,33 @@ screen say(who, what):
             add yuki_side_image.rsplit(' ', 1)[0] at grr
         elif yuki_side_image.endswith(" show"):
             add yuki_side_image.rsplit(' ', 1)[0] at shown
+            timer 0.1 action SetVariable(yuki_side_image, yuki_side_image.rsplit(' ', 1)[0])
         elif yuki_side_image.endswith(" yell"):
             add yuki_side_image.rsplit(' ', 1)[0] at yell
+        elif yuki_side_image.endswith(" flip"):
+            add yuki_side_image.rsplit(' ', 1)[0]:
+                xzoom -1.0
         else:
             add yuki_side_image
 
+    # if not renpy.variant("small") and aurelia_side_image is not None:
+    if aurelia_side_image is not None:
+        add aurelia_side_image.replace("aurelia", "cat"):
+            pos (1400, 600)
+
+    # if not renpy.variant("small") and quinn_side_image is not None:
+    if quinn_side_image is not None:
+        if quinn_side_image.endswith(" startle"):
+            add quinn_side_image.rsplit(' ', 1)[0]:
+                at startle
+                pos (0, 550)
+        else:
+            add quinn_side_image:
+                pos (0, 550)
+
 default yuki_side_image = None
+default aurelia_side_image = None
+default quinn_side_image = None
 
 ## Make the namebox available for styling through the Character object.
 init python:
@@ -262,6 +284,7 @@ screen quick_menu():
         hbox:
             style_prefix "quick"
 
+            # if renpy.variant("pc"):
             xalign 0.597
             yalign 0.97
 
@@ -290,7 +313,6 @@ style quick_button:
 
 style quick_button_text:
     properties gui.button_text_properties("quick_button")
-
 
 ################################################################################
 ## Main and Game Menu Screens
@@ -437,8 +459,8 @@ screen main_menu():
     add gui.main_menu_background
 
     ## This empty frame darkens the main menu.
-    frame:
-        pass
+    # frame:
+    #     pass
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
@@ -638,6 +660,13 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
+            text _("Character Sprites and CGs by {a=https://shiroishi888.tumblr.com/}Shiroishi{/a}")
+            text _("GUI and Outline by {a=https://illusia.itch.io/}Illusia{/a}")
+            text _("Writing by {a=https://twitter.com/folesodev}Foleso{/a}")
+            text _("Concept by Phoenix")
+            text _("Programming by {a=https://omelette.itch.io/}omelette{/a}")
+            text _("Music by {a=https://Wingless-Seraph.net}Wingless-Seraph{/a}")
+            text _("Forest BG by {a=https://konett.itch.io/}Konett{/a}")
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
@@ -937,6 +966,9 @@ style check_button_text:
 
 style slider_slider:
     xsize 525
+    thumb_offset 15
+    left_gutter 25
+    right_gutter 25
 
 style slider_button:
     properties gui.button_properties("slider_button")
@@ -1512,9 +1544,9 @@ screen quick_menu():
             textbutton _("Menu") action ShowMenu()
 
 
-style window:
-    variant "small"
-    background "gui/phone/textbox.png"
+# style window:
+#     variant "small"
+#     background "gui/phone/textbox.png"
 
 style radio_button:
     variant "small"
