@@ -14,7 +14,7 @@ label zethe:
     "Zethe grumbled and settled in the chair next to Yuki."
     yuki blush
     show zethe neutral
-    "Yuki adjusted his tie. Two guys in such tiny dorm got hot very quickly."
+    "Yuki adjusted his tie. Two guys in such a tiny dorm got hot very quickly."
     yuki
     z "Since we are creating a phoenix, we will require—"
     yuki angry
@@ -34,7 +34,7 @@ label zethe:
     y "But it would be in the shape of a teddy bear!"
     show zethe angry blush
     yuki angry blush
-    z "That's commpletely useless!"
+    z "That's completely useless!"
     "After they argued some more, they finally decided on a compromise: A phoenix that healed over a wide range."
     show zethe neutral -blush
     yuki
@@ -73,7 +73,7 @@ label zethe:
     z "Alright."
     show zethe neutral
     "Zethe pulled out a paper and began to draw several intricate patterns in a flash. Something Yuki could never do."
-    "Sighing, Yuki went back to his reasearch. A heading in the book caught his eye."
+    "Sighing, Yuki went back to his research. A heading in the book caught his eye."
     yuki sad
     yN "Magic from heartbreak."
     show zethe sad
@@ -82,12 +82,12 @@ label zethe:
     yuki shocked blush
     yN "Am I... feeling something for him?"
     yuki shocked
-    "From the beginning, Yuki tried to deny his feelings for Zethe. He tried to push it down."
+    "From the beginning, Yuki had tried to deny his feelings for Zethe. He had tried to push them down."
     "But now... now it was something he couldn't deny anymore."
     yuki shocked blush
     "Looking over at his chiseled face, his beautiful eyes..."
     yuki sad blush
-    "Then it struck Yuki. Zethe didn't care for him. He was in love with Quinn. Just as he himself was in his previous life."
+    "Then it struck Yuki. Zethe didn't care for him. He was in love with Quinn. Just as he himself had been in his previous life."
     yuki sad
     # chair scrape
     show zethe shocked
@@ -97,7 +97,7 @@ label zethe:
     show zethe angry
     z "What?"
     # anim grab
-    "Zethe grabbed Yuki's arm. His eyes flit over to the passage Yuki just read and his cheeks heated."
+    "Zethe grabbed Yuki's arm. His eyes flitted over to the passage Yuki had just read and his cheeks heated."
     yuki shocked
     y "..."
     yuki shocked blush
@@ -177,7 +177,7 @@ label .kiss:
     show zethe shocked blush
     "Yuki's chest tightened. Zethe immediately noticed the shift in [his] demeanor."
     yuki blush
-    z "B-But quickly, I became unable to take my eyes of you. When you were around, I could not stop looking at you. When you were gone, I was always thinking of you."
+    z "B-But quickly, I became unable to take my eyes off you. When you were around, I could not stop looking at you. When you were gone, I was always thinking of you."
     show zethe neutral blush
     z "I wanted you to be mine. And in turn..."
     "Zethe sucked in a sharp breath."
@@ -197,7 +197,7 @@ label .accept:
     show zethe happy blush
     "Zethe's eyes lit up."
     z "Really?"
-    "His face continued such joy it was impossible for Yuki to resist. [He] moved [his] hand over Zethe's and linked their fingers together."
+    "His face showed such joy that it was impossible for Yuki to resist. [He] moved [his] hand over Zethe's and linked their fingers together."
     y "Yes, I meant it. I..."
     yuki sad blush
     "Yuki felt his throat tighten. The words \"I love you\" were too much at the moment."
@@ -205,7 +205,7 @@ label .accept:
     yuki blush
     y "I care about you too. A lot."
     show zethe neutral blush
-    "Zethe's eyes softened and become moist."
+    "Zethe's eyes softened and became moist."
     show zethe sad blush
     z "I can't... I can't believe this... I just..."
     yuki blush happy
@@ -229,7 +229,7 @@ label .accept:
 
 label .fun:
     yuki None
-    "The next few weeks were incredibly exciting."
+    "The next few weeks were exciting."
     "Zethe took Yuki to incredibly wild, exotic places. They went to magic shows, concerts, and even live sporting arenas."
     scene bg yukis_dorm night with fade
     "Yuki and Zethe stumbled back into Yuki's dorm, gasping for air."
@@ -241,7 +241,7 @@ label .fun:
     "Zethe smirked tiredly."
     z "Not as... crazy.. as... you...!"
     yuki
-    "Yuki collapsed on the bed, Zethe followed suit next to him."
+    "Yuki collapsed on the bed, and Zethe followed suit next to him."
     y "Move. This bed is not big enough."
     show zethe neutral
     z "You move."
@@ -253,7 +253,7 @@ label .fun:
     "Yuki glared at Zethe, who was unaffected by it."
     y "You're so... ugh."
     yuki shocked blush
-    "Zethe leaned over and kissed Yuki. Yuki felt his exhaustion melt away and leaned into it."
+    "Zethe leaned over and kissed Yuki. Yuki felt his exhaustion melt away and leaned into the kiss."
     yuki happy blush
     show zethe happy blush
     y "Mm..."
@@ -271,7 +271,7 @@ label .fun:
     y "Hmph. That would've never happened if I was there."
     show zethe neutral
     z "Suuure."
-    "Zethe dragged out the words slowly."
+    "Zethe dragged out the word slowly."
     yuki angry
     y "You..."
     show zethe angry blush
@@ -291,7 +291,7 @@ label .fun:
     show zethe sad
     "Yuki rubbed his forehead."
     yuki
-    y "I-It's nothing. Sorry just... a little tired today."
+    y "I-It's nothing. Sorry. Just... a little tired today."
     "Zethe looked suspicious but didn't press the issue."
     show zethe neutral
     z "If you say so..."
@@ -300,7 +300,7 @@ label .fun:
     yuki neutral
     y "I meant it. Come here."
     show zethe neutral blush
-    "Yuki pulled Zethe into tight hug."
+    "Yuki pulled Zethe into a tight hug."
     yuki happy blush
     show zethe happy blush
     yN "Everything will work out. I swear it."
@@ -391,8 +391,8 @@ label .bad:
         align(0.5, 0.5)
     with dissolve
     cat "..."
-    "He stared off into the window."
-    "Although the spell had saved his Mother, the shock of losing Zethe changed Yuki forever."
+    "He stared off out of the window."
+    "Although the spell had saved his Mother, the shock of losing Zethe had changed Yuki forever."
     "He was a broken man."
     yuki sad
     y "..."
@@ -421,9 +421,9 @@ label .bad:
     y "I'm... I'm...!"
     yuki shocked blush
     "Realizing something, {font=Menlo.ttc}████{/font} dropped his palms."
-    y "It doesn't matter... does it. Who I am..."
+    y "It doesn't matter... does it? Who I am..."
     yuki sad blush
-    "{font=Menlo.ttc}████{/font} felt painful emotions in his chest surface. But he couldn't remember why he felt it. Or what made him feel that way."
+    "{font=Menlo.ttc}████{/font} felt painful emotions in his chest surface. But he couldn't remember why he felt them. Or what made him feel that way."
     "All {font=Menlo.ttc}████{/font} knew was, staying among others would only cause everyone more suffering."
     yuki sad
     yN "This is for the best."
@@ -465,7 +465,7 @@ label .good:
     y "Inevitable! I know. Of course I do. I also know that she's going to a better place and—"
     z "But you wanted her to live."
     yuki sad
-    "Zethe's eyes were teary, filled with understanding. Yuki couldn't bear looking at him, and buried his face in Zethe's chest."
+    "Zethe's eyes were teary, filled with understanding. Yuki couldn't bear to look at him, and buried his face in Zethe's chest."
     "Zethe roughly stroked Yuki's hair."
     show zethe sad blush
     z "I love you. So you cannot die on me, okay?!"
@@ -503,7 +503,7 @@ label .good:
     scene black with fade
     yuki None
     "Yuki closed his eyes."
-    "Yuki's mother was proclaimed dead just a fews hours after the incident on that fateful day."
+    "Yuki's mother had been proclaimed dead just a fews hours after the incident on that fateful day."
     "Although Yuki couldn't make the funeral, he visited her grave immediately after the semester ended."
     "Since the successful completion of their project, Yuki became far more interested in spells that combined practicality and flashiness."
     "After graduation, he partnered with Zethe to start a travelling magician act."
@@ -582,7 +582,7 @@ label .good:
     yuki sad sweat
     "Yuki put his face in his hands."
     y "Not again!"
-    "For last years anniversary, Zethe had gotten to the Crystal Flower first as well."
+    "For last year's anniversary, Zethe had gotten to the Crystal Flower first as well."
     yuki shocked
     z "Just give up already."
     yuki angry
@@ -614,7 +614,7 @@ label .good:
     show zethe angry blush
     z "You heard me!"
     show zethe neutral blush
-    "Yuki knew Zethe was using his bravado to cover up his embarrasment."
+    "Yuki knew Zethe was using his bravado to cover up his embarrassment."
     yuki happy blush
     show zethe shocked blush
     y "Yes. Of course I will, stupid!"

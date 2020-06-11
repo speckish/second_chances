@@ -157,11 +157,11 @@ label start:
     y "You're alright!"
     yuki
     show cat smile
-    cat "Yes, I am. Thank you mortal."
+    cat "Yes, I am. Thank you, mortal."
     yuki shocked
     show cat neutral
     "Yuki jumped in shock."
-    y "Y-You're talking?!"
+    y "Y-You can talk?!"
     play sound "audio/meow_4.mp3"
     show cat smirk
     cat "Hmph. Is there something so wrong with that?"
@@ -173,7 +173,7 @@ label start:
     show cat neutral
     "Yuki shook [his] head."
     yuki
-    y "So uh, since you apparently talk, mind telling me what got you here in this neck of woods?"
+    y "So uh, since you can apparently talk, would you mind telling me what got you here in this neck of woods?"
     "Yuki was fully certain that there were no animals living near [his] cabin. [His] magic wards made sure of it."
     yuki sad
     "But recently [hed] been slacking off, which might've explained why there was a cat."
@@ -182,7 +182,7 @@ label start:
     show cat smug
     cat "Hmph. I was looking to help humans, but they just called me a monster and attacked me!"
     show cat smirk
-    "The cat looked at me curiously."
+    "The cat looked at Yuki curiously."
     yuki sad
     cat "But you're not like most mortals, are you?"
     "Yuki shuddered under the cat's scrutinous gaze."
@@ -328,7 +328,7 @@ label first_day:
     yN "Where... where am I?"
     scene bg school day with fade
     play music "audio/Nostalgia_loop.ogg" fadein 1.0
-    "[He] looked around. He was sitting under a large, shady tree. From the corner of his eye, he saw college students hurridly walking."
+    "[He] looked around. He was sitting under a large, shady tree. From the corner of his eye, he saw college students hurriedly walking."
     yuki sad
     "Some were casting low-level magic spells, causing haphazard accidents. Others were frantically scribbling through notebooks."
     yuki
@@ -485,12 +485,12 @@ label classroom:
     y "..."
     yuki sad
     show quinn
-    prof "...And that is why, today we are having a test where students demonstrate their power. There are no restrictions, because all of you are far so weak
-    it is uneccesary."
-    "The students uncomfortably shifted."
+    prof "...And that is why, today we are having a test where students demonstrate their power. There are no restrictions, because all of you are so weak
+    it is unneccesary."
+    "The students shifted uncomfortably."
     yuki neutral
     yN "You fools, this is what he wants."
-    "Yuki knew he wasn't one to judge, considering he was in their position back then as well. But he couldn't help feeling a bit smug."
+    "Yuki knew he wasn't one to judge, considering he had been in their position back then as well. But he couldn't help feeling a bit smug."
     yuki sad
     show zethe at offscreenleft
     pause 0.0
@@ -527,7 +527,7 @@ label classroom:
     show zethe at center with move
     y "Hm..."
     yuki sad
-    "Yuki peered curiously to see what Zethe would do. Last time, he was so caught up in his own thoughts to bother about him."
+    "Yuki peered curiously to see what Zethe would do. Last time, he had been so caught up in his own thoughts to bother about him."
     "Zethe raised his palm forward and began moving his fingers in a complicated motion. A beautiful, intricate flower of fire danced on his fingertips."
     yuki sad blush
     y "Wow..."
@@ -539,7 +539,7 @@ label classroom:
     show zethe neutral -blush
     "The entire class audibly gasped."
     yuki shocked sweat
-    "Inside the icicle casing, Yuki saw the fire dancing intricatly. It was truly impressive."
+    "Inside the icicle casing, Yuki saw the fire dancing intricately. It was truly impressive."
     yuki angry
     show quinn at offscreenleft, seated
     pause 0.0
@@ -550,7 +550,7 @@ label classroom:
     y "...!"
     yuki blush
     show zethe
-    "The annoyance inside him was familiar, but Yuki did his best to supress it."
+    "The annoyance inside him was familiar, but Yuki did his best to suppress it."
     show quinn shocked blush
     show zethe happy
     z "Hm... I will keep it for the next time we meet."
@@ -627,7 +627,7 @@ label classroom:
             show zethe sad -blush
             yN "I...I..."
             show zethe shocked
-            "As if by instinct, I caught Zethe's shocked gaze."
+            "As if by instinct, he caught Zethe's shocked gaze."
             show zethe shocked blush
             yuki sad blush
             yN "At least now I outdid you..."
@@ -661,7 +661,7 @@ label classroom:
             show quinn angry blush
             q "Both of you, Yuki's really injured! Don't make it worse."
             yuki happy
-            "I smiled weakly at her concern. She really was the same."
+            "Yuki smiled weakly at her concern. She really was the same."
             show zethe sad
             show quinn angry -blush
             "Zethe frowned, but didn't say much else."
@@ -821,7 +821,7 @@ label infirmary_end:
     "Zethe's gaze softened at her response."
     show zethe sad
     z "Maybe, but..."
-    "Looking at the two of them interact as if they were long-lost friends made my heart clench."
+    "Looking at the two of them interact as if they were long-lost friends made Yuki's heart clench."
     show quinn shocked
     show zethe shocked
     yuki angry

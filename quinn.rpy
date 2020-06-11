@@ -60,7 +60,7 @@ label quinn:
     yuki sad
     y "Yeah... I..."
     yuki sad blush
-    "Quinn gently pat Yuki's back."
+    "Quinn gently patted Yuki's back."
     yuki sad
     q "What's wrong?"
     yuki sad blush
@@ -143,7 +143,7 @@ label quinn:
     q "That's what I believe. But it's not easy."
     show quinn -blush
     yuki sad blush
-    "Yuki felt a sharp pain in his heart. Trying to think of something else, he points to the plants."
+    "Yuki felt a sharp pain in his heart. Trying to think of something else, he pointed to the plants."
     yuki blush
     y "So... if you use magic, these could grow a lot faster."
     show quinn happy
@@ -219,7 +219,7 @@ label quinn:
     q "No! No, that's not it at all. I'm happy. Very happy."
     y "Really?"
     show quinn happy blush
-    q "Yes. I-I'm not too knowledgable about this but... I'd love to be yours as well."
+    q "Yes. I-I'm not too knowledgeable about this but... I'd love to be yours as well."
     "Yuki pulled Quinn into a tight hug."
     yuki happy blush
     y "I promise, I'll make you the happiest woman in the world."
@@ -330,7 +330,7 @@ label .bad:
     "Yuki wanted to reply, to say that it was all okay. But his mouth didn't move. His voice didn't come out."
     yN "What's... what's happening?"
     q "Stay with me, okay? Please! Yuki! I-I'll do anything... please! Don't go!"
-    "Quinn tried to shake me, but it felt like a tap on the shoulder."
+    "Quinn tried to shake him, but it felt like a tap on the shoulder."
     yN "I want to say... I love you too."
     "Still, no words came out of his mouth."
     q "No... not like this! Please!"
@@ -351,7 +351,7 @@ label .bad:
     "Silently, Quinn opened the door of the cabin and entered."
     "Yuki's mother sat in a chair, staring into the distance, unmoving."
     "Although the spell Yuki performed did work, it left Yuki's mother mentally broken."
-    "She couldn't accept the fact her son was dead, and spent her days staring into the distance."
+    "She couldn't accept the fact that her son was dead, and she spent her days staring into the distance."
     "Silently, Quinn left food supplies at the door and left."
     scene forest with fade
     qu sad
@@ -473,7 +473,7 @@ label .good:
     q "It's—It's okay. I can handle it."
     show quinn sad -blush
     yuki sad
-    "Yuki's mother was proclaimed dead just a fews hours after the incident on that fateful day."
+    "Yuki's mother had been proclaimed dead just a fews hours after the incident on that fateful day."
     "Although Yuki couldn't make the funeral, he visited her grave immediately after the semester ended."
     "Since the successful completion of their project, Yuki became very interested in research to cure diseases."
     "After graduating, Quinn started a medical research facility, of which Yuki was one of the first employees."
@@ -496,7 +496,7 @@ label .good:
     show quinn happy -blush
     q "I'm glad."
     show quinn neutral
-    "Despite the city being a more convenient place to stay, Quinn and Yuki set up home in a cabin in the woods."
+    "Despite the city being a more convenient place to stay, Quinn and Yuki had set up home in a cabin in the woods."
     "They enjoyed going for long, picturesque walks, and could teleport to work easily since they set up a special rune."
     yuki
     "Quinn and Yuki sat down and drank the soup quickly."
@@ -539,7 +539,7 @@ label .good:
     yuki blush
     q "Of course! I will. Yuki, oh, you didn't have to—"
     yuki happy blush
-    "Yuki slipped the finger onto Quinn's hand and kissed her."
+    "Yuki slipped the ring onto Quinn's finger and kissed her."
     "They knew that this wasn't the end. Everything wasn't perfect, but they knew one thing."
     show quinn neutral blush
     "This wasn't the end."

@@ -26,7 +26,7 @@ label cafeteria:
     y "..."
     scene black with fade
     yuki None
-    "Yuki spend the past few weeks doing his very best to avoid both Zethe and Quinn. He felt a gutteral response whenever he was around them."
+    "Yuki spent the past few weeks doing his very best to avoid both Zethe and Quinn. He felt a grating response whenever he was around them."
     show bg yukis_dorm day with fade
     yuki sad show
     "Sighing, he walked to the bookshelf in the corner of his room and pulled out his book of Vednore perks."
@@ -55,9 +55,9 @@ label cafeteria:
     yuki sad
     y "Ugh..."
     yuki
-    "After a couple moments rest, he walked over to where he'd dropped the book and picked it up."
+    "After a couple moments' rest, he walked over to where he'd dropped the book and picked it up."
     y "As I was looking..."
-    "Yuki flipped over to the page that read, 'Food Delivery Tickets.' He knew he was running low but..."
+    "Yuki flipped over to the page that read 'Food Delivery Tickets.' He knew he was running low but..."
     yuki angry blush # TODO: grr
     y "Goshdarnit."
     yuki angry
@@ -80,9 +80,9 @@ label cafeteria:
     pause 0.0
     yuki None
     scene bg cafeteria day with fade
-    "Yuki got his food on a tray. He precariously held it so as not to aggrevate his already painful wrist."
+    "Yuki got his food on a tray. He precariously held it so as not to aggravate his already painful wrist."
     yuki sad
-    "Looking around, all the seats were taken. Except ones next to Zethe and Quinn."
+    "Looking around, all the seats were taken. Except the ones next to Zethe and Quinn."
     yuki sad blush
     yN "That's what I get for showing up so late..."
     yuki sad
@@ -93,7 +93,7 @@ label cafeteria:
             yuki
             "Zethe was sitting next to a group of other nobility."
             yuki blush
-            "Yuki felt a little intimidated, but wasn't about to be swayed."
+            "Yuki felt a little intimidated, but he wasn't about to be swayed."
             yuki sad
             "However, it appeared that the nobles were mostly conversing amongst themselves, with Zethe quietly picking at his food."
             yuki
@@ -117,7 +117,7 @@ label cafeteria:
             show zethe neutral
             "Yuki ignored Zethe and took a spoonful of soup. He hoped that it would be easy enough to eat."
             yuki blush
-            "Unfortunately, his hand shook with discomfort. Still, he raised it into his mouth and drank it."
+            "Unfortunately, his hand shook with discomfort. Still, he raised it to his mouth and drank the soup."
             show zethe sad
             yuki
             z "..."
@@ -178,7 +178,7 @@ label cafeteria:
             show quinn shocked sweat at center, seated with move
             q "O-Oh! Hello, Yuki."
             show quinn shocked -sweat
-            y "Hey Quinn. This is the only spot I found. Hope you don't mind."
+            y "Hey, Quinn. This is the only spot I found. Hope you don't mind."
             "Yuki did his best to keep the ice out of his voice. He felt strange: fluctuating between gentle desire to stay by her side, and harsh memories of his hurt in the past."
             show quinn neutral
             q "Of course not!"
@@ -230,7 +230,7 @@ label cafeteria:
             show quinn sad blush
             q "It's okay, you don't need to act tough."
             yuki sad blush
-            "Meekly, I gave in."
+            "Meekly, Yuki gave in."
             show quinn happy blush
             yuki blush
             y "Ahh."
@@ -260,7 +260,7 @@ label library:
     yuki
     y "..."
     yuki sad
-    "Yuki furrowed his brow in concentration as he read, 'Lola: My First Guardian Spirit.' to himself."
+    "Yuki furrowed his brow in concentration as he read 'Lola: My First Guardian Spirit' to himself."
     play sound "audio/meow_5.mp3"
     aurelia smirk
     cat "Are you kidding me?"
@@ -319,7 +319,7 @@ label library:
     show quinn neutral
     y "Really? I hadn't got the chance to read that series yet, though I've been looking at others. Mind telling me more about it?"
     show quinn happy # TODO: excited
-    q "Sure! So there's this really mischevious spirit named Lola..."
+    q "Sure! So there's this really mischievous spirit named Lola..."
     show quinn happy # TODO: excited
     yuki sad
     "After hearing Quinn's fantastical tale of the Guardian Spirits in the series, Yuki was convinced it had nothing to do with reality in any way."
@@ -508,7 +508,7 @@ label assignment:
     yuki
     prof "For the final grade of the year, you will have to partner with another classmate for a special assignment."
     yuki sad
-    "The year had passed by in the blink of an eye. He clutched Mother's amulet. As long as it glowed, it was proof she was alive."
+    "The year had passed by in the blink of an eye. He clutched Mother's amulet. As long as it glowed, it was proof that she was alive."
     "But the light was dimming. There wasn't much time."
     "Normally Yuki found Professor Chen's lectures interesting. Now he just wanted it to be done with."
     yuki
@@ -522,20 +522,20 @@ label assignment:
     prof "You may partner with a student from the {i}Juris{/i} program to make a magical product."
     yuki sad
     "A magical product required not just the magic component, but a detailed legal contract to ensure no issues arose."
-    "In his previous life, Yuki partnered with Quinn to make the eternal garden in the center of the school."
+    "In his previous life, Yuki had partnered with Quinn to make the eternal garden in the center of the school."
     "It wasn't really a product that could be sold on a shelf, but they got a perfect grade anyway."
     yuki sad blush
     "This time, Yuki felt more conflicted. Quinn's attitude was very different."
     "Since he didn't push her, she was much more spontaneous and excited, which made him feel that they may have a real chance together..."
     yuki sad blush sweat
-    "On the other hand, Zethe's curious behavior drew Yuki's eye as well. Before, he just considered Zethe a worthy rival. But now, he felt something else..."
+    "On the other hand, Zethe's curious behavior drew Yuki's eye as well. Before, he had just considered Zethe a worthy rival. But now, he felt something else..."
 
     "What should Yuki do?"
 
     menu:
         "Make a magical product with Quinn":
             yuki blush
-            "It was a different timeline, but Yuki still deeply cared about Quinn. Maybe even deeper now that he knew her true nature."
+            "It was a different timeline, but Yuki still deeply cared about Quinn. Maybe even more deeply now that he knew her true nature."
             yuki
             scene bg hallway evening with fade
             "After class, Yuki waited in the hallway for Quinn to come out."
@@ -544,7 +544,7 @@ label assignment:
             show quinn shocked at center with move
             # show quinn shocked with dissolve
             q "Yuki?"
-            y "Hi Quinn. I just wanted to ask you something."
+            y "Hi, Quinn. I just wanted to ask you something."
             show quinn neutral blush
             yuki blush
             "Her cheeks flushed red."
@@ -573,8 +573,8 @@ label assignment:
             show quinn neutral sweat
             q "I-It's nothing. It was just a misunderstanding, that's all."
             yuki sad
-            "Yuki chewed the inside of his lip. In his previous life, they did the flashy garden display."
-            "But Yuki basically did the entire thing by himself, with Quinn barely giving any input."
+            "Yuki chewed the inside of his lip. In his previous life, they had made the flashy garden display."
+            "But Yuki had basically done the entire thing by himself, with Quinn barely giving any input."
             show quinn neutral -sweat
             yuki sad sweat
             "Yuki felt guilty."
@@ -632,7 +632,7 @@ label assignment:
             "Yuki knew he was up for a new challenge. And he knew just the person to take it on with."
             yuki
             scene bg hallway evening with fade
-            "After class, Yuki stood outside the door. He watched various students shuffle out and discuss different ideas."
+            "After class, Yuki stood outside the classroom door. He watched various students shuffle out and discuss different ideas."
             show zethe at offscreenright
             pause 0.0
             show zethe at center with move
@@ -655,7 +655,7 @@ label assignment:
             show zethe shocked sweat blush
             y "...It's nothing personal, either."
             show zethe neutral -blush sweat
-            "Zethe's face immediately fell, but he straighted himself."
+            "Zethe's face immediately fell, but he straightened himself."
             show zethe neutral -sweat
             z "Is that so? Can't you explain it in a proper manner?"
             "Yuki shook his head."
@@ -684,11 +684,11 @@ label assignment:
             "Zethe took a moment to think."
             z "No one can lose in a group project."
             yuki happy
-            y "I suppose I would, when you invetably fall behind."
+            y "I suppose I would, when you inevitably fall behind."
             show zethe neutral blush at startle
             z "You...!"
             # Anim?
-            "After some more childish bickering, Yuki realized they were getting no where."
+            "After some more childish bickering, Yuki realized they were getting nowhere."
             yuki
             show zethe neutral -blush
             y "What should the spell do?"
@@ -700,11 +700,11 @@ label assignment:
             y "..."
             yuki shocked
             show zethe neutral
-            z "How about... a massive phoneix."
+            z "How about... a massive phoenix."
             yuki shocked sweat
             y "That does... what exactly?"
             z "It will be a large bird. Made of fire. That flies."
-            y "Zethe, I know what a phoneix {i}is.{/i}"
+            y "Zethe, I know what a phoenix {i}is.{/i}"
             show zethe happy
             z "Great. So there's no problems there."
             yuki sad
@@ -722,7 +722,7 @@ label assignment:
             show quinn shocked at center
             show zethe at offscreenright
             with move
-            "After splitting ways with Zethe, Yuki sees Quinn in the hallway."
+            "After splitting ways with Zethe, Yuki saw Quinn in the hallway."
             q "Yuki?"
             y "Oh hello, Quinn."
             show quinn neutral
@@ -757,7 +757,7 @@ label research:
         "Naturally, Yuki eventually found himself entrusted with the keys."
 
     else:
-        "He failed the first exam, but worked on his raw magical skill a lot more."
+        "While he had failed the first exam, he had worked on his raw magical skill a lot more."
         "He easily passed through the complex web of security with finesse."
     yuki
     yN "So naive..."
@@ -788,12 +788,12 @@ label research:
     yuki shocked sweat
     "Yuki opened his eyes."
     yuki sad
-    "The only remains of the book was writing etched on the ground."
+    "The only thing remaining of the book was writing etched on the ground."
     "It was in..."
     yuki shocked blush sweat
     yN "Blood?!"
     yuki shocked
-    "It read, 'In order to save a life, something of equal value must be sacrified. Be prepared.'"
+    "It read: 'In order to save a life, something of equal value must be sacrified. Be prepared.'"
     yuki angry # smash efx
     "Yuki slammed his fist on the table."
     yuki angry blush
@@ -810,7 +810,7 @@ label research:
 label finalMother:
     scene black with fade
     yuki None
-    "A significant amount of time passed. It was nearing the end of the year, yet "
+    "A significant amount of time passed. It was nearing the end of the year."
     scene bg yukis_dorm day with fade
     yuki sad
     "Yuki sat down at his desk. Once again, his eyes flitted to the calendar."
@@ -825,7 +825,7 @@ label finalMother:
     "Blankly, Yuki accepted it."
     y "...Mother."
     mom "Yuki."
-    "Yuki stared at her blankly. He spent the last few days tired and exhausted. He couldn't muster up the energy to cry."
+    "Yuki stared at her blankly. He had spent the last few days tired and exhausted. He couldn't muster up the energy to cry."
     mom "It's going to happen soon. I'm going to pass on."
     y "I see."
     mom "I do not like the look in your eye."
@@ -846,7 +846,7 @@ label finalMother:
     yuki shocked startle
     y "Mother!"
     yuki shocked
-    "Yuki instictively reached out, before realizing he couldn't."
+    "Yuki instinctively reached out, before realizing he couldn't."
     yuki sad
     mom "My boy. I love you."
     yuki sad blush
@@ -855,7 +855,7 @@ label finalMother:
     yuki shocked
     "The line cut."
     yuki sad
-    "Yuki got up from his chair, and hurried. There wasn't much time left."
+    "Yuki got up from his chair and hurried. There wasn't much time left."
     scene lab with fade
     yuki None
     "Yuki stood in his lab. The preparations took longer than he'd originally expected, and his Mother was about to pass in a few hours."
